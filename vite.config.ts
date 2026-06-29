@@ -13,9 +13,11 @@ export default defineConfig({
         manualChunks: {
           'sql-wasm': ['sql.js'],
           'dexie': ['dexie'],
-        }
+        },
+        assetFileNames: 'assets/[name].[hash][extname]'
       }
-    }
+    },
+    chunkSizeWarningLimit: 1500
   },
   assetsInclude: ['**/*.wasm'],
 })
